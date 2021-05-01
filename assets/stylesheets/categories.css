@@ -20,3 +20,8 @@
     font-weight: bold;
   }
   
+
+  .select-category{
+      font-weight: 900;
+      text-decoration:underline ;
+  }

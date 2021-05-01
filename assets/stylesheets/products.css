@@ -32,6 +32,8 @@
   .product .product__content .product__name {
     text-align: center;
     text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: 900;
   }
   
   .product .product__price {
@@ -44,6 +46,16 @@
     color: white;
     padding: 5px;
     font-size: 0.8rem;
+  }
+
+  .product .product__discount{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: var(--color-blue);
+    color: white;
+    padding: 5px;
+    font-size: 0.6rem;
   }
   
   .btn-cart {

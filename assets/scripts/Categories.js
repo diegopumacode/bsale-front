@@ -1,3 +1,4 @@
+import Category from "./components/Category.js";
 import { STORE } from "./Store.js";
 
 export default function Categories(parentSelector) {
@@ -12,13 +13,11 @@ export default function Categories(parentSelector) {
 
 Categories.prototype.generateProducts = function (parentSelector) {
   const container = this.parentElement.querySelector(parentSelector);
-  const products = STORE.categories.map((product) => {
-    return `
-            <a class="categories__item">${product.name}</a>
-        `;
+  const category = STORE.categories.map((categoryData) => {
+    return new Category(parentSelector, categoryData);
   });
-  container.innerHTML = products.join("");
-  return products;
+  container.innerHTML = category.join("");
+  return category;
 };
 
 Categories.prototype.render = function () {
@@ -26,4 +25,7 @@ Categories.prototype.render = function () {
   this.parentElement.innerHTML = this;
 
   const categories = this.generateProducts(".js-categories-container");
+  categories.forEach(category=>{
+      category.addEventListeners()
+  })
 };
