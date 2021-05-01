@@ -1,0 +1,22 @@
+.categories__list {
+    padding: 0 60px;
+    display: flex;
+    gap: 40px;
+    background-color: var(--color-blue);
+  }
+  
+  .categories__list .categories__item {
+    height: 60px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.8rem;
+  }
+  
+  .categories__list .categories__item:hover {
+    font-weight: bold;
+  }
+  
