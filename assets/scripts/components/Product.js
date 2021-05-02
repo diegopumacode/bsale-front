@@ -46,15 +46,18 @@ Product.prototype.listenCart = function () {
     let itemsCart = STORE.shoppingCart;
     if (itemsCart.length > 0) {
       let findItem = STORE.shoppingCart.find((item) => item.id == this.data.id);
-      if (findItem) {
-        
+      if (findItem) {  
         findItem.count += 1;
+        alert("Se añadio una unidad mas a tu producto!!")
       } else {
         itemsCart.push({ ...this.data, count: 1 });
+        alert("Producto añadido al carrito!!")
       }
     } else {
       itemsCart.push({ ...this.data, count: 1 });
+      alert("Producto añadido al carrito!!")
     }
+    localStorage.setItem("car",JSON.stringify(itemsCart))
     car.render();
   });
 };

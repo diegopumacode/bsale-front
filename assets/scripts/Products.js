@@ -14,11 +14,17 @@ export default function Products(parentSelector) {
 Products.prototype.generateProducts = function (parentSelector) {
   console.log(this.parentElement);
   const container = this.parentElement.querySelector(parentSelector);
-  console.log(STORE);
   const products = STORE.products.map((product) => {
     return new Product(parentSelector, product);
   });
+
+  
+
   container.innerHTML = products.join("");
+  if (products.length == 0) {
+    
+    container.innerHTML = `<p>No existen productos por ahora</p>`
+  }
   return products;
 };
 

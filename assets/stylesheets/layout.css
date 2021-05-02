@@ -6,6 +6,12 @@ header{
     padding: 0 60px;
 }
 
+@media only screen and (max-width: 600px) {
+    header {
+      flex-direction: column;
+      padding: 20px 0;
+    }
+  }
 .about{
     padding: 10px 60px;
     background-color: var(--color-gray1);
@@ -47,6 +53,7 @@ header{
 
 .search__action{
     width: 100px;
+    height: 30px;
     background-color: var(--color-blue);
     color: white;
     border: none;
@@ -57,3 +64,71 @@ header{
 .search__action:hover{
     opacity: 0.9;
 }
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+
+  }
+
+  .modal-title{
+      font-size: 2rem;
+  }
+  
+  .modal-container{
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .clear-car{
+      display: block;
+      cursor: pointer;
+      color: white;
+      text-align: center;
+      background-color: var(--color-blue);
+      padding: 5px 20px;
+      margin: 20px 0;
+
+  }
+  .remove-car{
+      background-color: red;
+      color: white;
+      padding: 5px;
+      height: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.8rem;
+  }
